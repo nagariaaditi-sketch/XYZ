@@ -1,0 +1,194 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Main Wrapper with custom typography */
+.stApp {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Theme definition variables */
+.theme-dark {
+    --bg-primary: #0a0f1d;
+    --bg-secondary: #131a30;
+    --bg-tertiary: #1e293b;
+    --border-color: #2e3b52;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-gold: #d4af37;
+    --accent-blue: #3b82f6;
+    --accent-green: #10b981;
+    --accent-red: #ef4444;
+    --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    --glass-bg: rgba(19, 26, 48, 0.8);
+}
+
+.theme-light {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f1f5f9;
+    --border-color: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #64748b;
+    --accent-gold: #b58900;
+    --accent-blue: #1d4ed8;
+    --accent-green: #047857;
+    --accent-red: #b91c1c;
+    --card-shadow: 0 4px 20px 0 rgba(148, 163, 184, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* Application Container */
+.dashboard-container {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+/* Glassmorphic Metrics Card */
+.metric-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-bottom: 1rem;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-gold);
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.metric-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+}
+
+.metric-change {
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.metric-change.positive {
+    color: var(--accent-green);
+}
+
+.metric-change.negative {
+    color: var(--accent-red);
+}
+
+/* Prediction Output panel */
+.prediction-panel {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
+    border: 1.5px solid var(--accent-gold);
+    border-radius: 16px;
+    padding: 1.75rem;
+    margin: 1.5rem 0;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--card-shadow);
+}
+
+/* AI Report block */
+.ai-report-box {
+    background: var(--bg-secondary);
+    border-left: 4px solid var(--accent-blue);
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0 12px 12px 0;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Recommendation Badges */
+.recommendation-badge {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.recommendation-badge.buy {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: var(--accent-green);
+    border: 1.5px solid var(--accent-green);
+}
+
+.recommendation-badge.neutral {
+    background-color: rgba(59, 130, 246, 0.15);
+    color: var(--accent-blue);
+    border: 1.5px solid var(--accent-blue);
+}
+
+.recommendation-badge.avoid {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: var(--accent-red);
+    border: 1.5px solid var(--accent-red);
+}
+
+/* Sub-headings and Title overrides */
+.section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Style for Countdown timer widget */
+.countdown-box {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.countdown-digits {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-gold);
+}
